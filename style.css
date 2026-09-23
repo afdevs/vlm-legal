@@ -1,0 +1,99 @@
+/* Shared shell for the three public legal pages. Brand tokens are copied from
+   src/design/tokens.ts; the pages are static and have no build step, so there is
+   no import to keep them in sync — change both together. */
+:root {
+  --paper: #f4f2ec;
+  --white: #fff;
+  --ink: #16213a;
+  --ink-soft: #3a4561;
+  --ink-muted: #6a7491;
+  --blue: #4169e1;
+  --navy: #1a2c6b;
+  --gold: #c8a24a;
+  --hairline: rgba(20, 30, 80, 0.1);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.65 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+header {
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+  color: var(--white);
+  padding: 44px 22px 38px;
+}
+header .wrap { max-width: 720px; margin: 0 auto; }
+header .kicker {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 2.4px;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+header h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;
+  line-height: 1.18;
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+header .updated { margin: 12px 0 0; font-size: 13px; opacity: 0.75; }
+main {
+  max-width: 720px;
+  margin: -18px auto 0;
+  padding: 0 22px 64px;
+}
+section {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin: 18px 0;
+  box-shadow: 0 8px 30px rgba(20, 22, 90, 0.07);
+}
+h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  letter-spacing: -0.3px;
+  margin: 0 0 10px;
+}
+h3 { font-size: 15px; margin: 18px 0 6px; }
+p, li { color: var(--ink-soft); }
+p { margin: 0 0 12px; }
+ul { margin: 0 0 12px; padding-left: 20px; }
+li { margin: 0 0 6px; }
+a { color: var(--blue); }
+strong { color: var(--ink); }
+.callout {
+  border-left: 3px solid var(--gold);
+  background: #faf8f1;
+  padding: 14px 16px;
+  border-radius: 0 10px 10px 0;
+  margin: 0 0 12px;
+}
+.callout p:last-child { margin-bottom: 0; }
+table { width: 100%; border-collapse: collapse; margin: 0 0 12px; }
+th, td {
+  text-align: left;
+  padding: 9px 10px 9px 0;
+  border-bottom: 1px solid var(--hairline);
+  font-size: 14.5px;
+  color: var(--ink-soft);
+  vertical-align: top;
+}
+th { color: var(--ink); font-weight: 600; }
+footer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 22px 56px;
+  color: var(--ink-muted);
+  font-size: 13px;
+}
+footer a { margin-right: 14px; }
+@media (max-width: 480px) {
+  header { padding: 34px 18px 32px; }
+  header h1 { font-size: 26px; }
+  main, footer { padding-left: 18px; padding-right: 18px; }
+  section { padding: 18px; }
+}
